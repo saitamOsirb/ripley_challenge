@@ -81,7 +81,7 @@ Cada producto debe tener la siguiente estructura:
 
 ---
 
-### Obtener productos por talla (NUEVA ETAPA - OBLIGATORIO)
+### Obtener productos por talla (OBLIGATORIO)
 **GET** `/products/size/:talla`
 
 - Retorna todos los productos cuya `atributos.talla` coincida con el parámetro `talla`
