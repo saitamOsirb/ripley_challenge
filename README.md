@@ -65,9 +65,9 @@ Cada producto debe tener la siguiente estructura:
 - No debe permitir productos con el mismo `codigo`
 
 **Status esperados**
-- `201 Created` → producto creado correctamente
-- `409 Conflict` → el código ya existe
-- `400 Bad Request` → error de validación
+- `201 Created` → 
+- `409 Conflict` →
+- `400 Bad Request` → 
 
 ---
 
@@ -89,7 +89,7 @@ Cada producto debe tener la siguiente estructura:
 
 **Status esperados**
 - `200 OK`
-- `404 Not Found` si el producto no existe
+- `404 Not Found`
 
 ---
 
@@ -100,7 +100,7 @@ Cada producto debe tener la siguiente estructura:
 
 **Status esperados**
 - `204 No Content`
-- `404 Not Found` si no existe
+- `404 Not Found`
 
 ---
 
