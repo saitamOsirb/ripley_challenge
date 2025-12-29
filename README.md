@@ -65,9 +65,9 @@ Cada producto debe tener la siguiente estructura:
 - No debe permitir productos con el mismo `codigo`
 
 **Status esperados**
-- `201 Created` → 
-- `409 Conflict` →
-- `400 Bad Request` → 
+- `201 Created` → producto creado correctamente
+- `409 Conflict` → el código ya existe
+- `400 Bad Request` → error de validación
 
 ---
 
@@ -75,6 +75,28 @@ Cada producto debe tener la siguiente estructura:
 **GET** `/products`
 
 - Retorna la lista de productos desde el JSON
+
+**Status esperado**
+- `200 OK`
+
+---
+
+### Obtener productos por talla (NUEVA ETAPA - OBLIGATORIO)
+**GET** `/products/size/:talla`
+
+- Retorna todos los productos cuya `atributos.talla` coincida con el parámetro `talla`
+- La búsqueda debe ser exacta (ej: `M`, `L`, `XL`)
+
+**Status esperado**
+- `200 OK`
+
+---
+
+### Obtener productos por color (DESEABLE)
+**GET** `/products/color/:color`
+
+- Retorna todos los productos que tengan el color indicado dentro de `atributos.coloresDisponibles`
+- La búsqueda debe ser exacta (ej: `rojo`, `negro`)
 
 **Status esperado**
 - `200 OK`
@@ -89,7 +111,7 @@ Cada producto debe tener la siguiente estructura:
 
 **Status esperados**
 - `200 OK`
-- `404 Not Found`
+- `404 Not Found` si el producto no existe
 
 ---
 
@@ -100,7 +122,7 @@ Cada producto debe tener la siguiente estructura:
 
 **Status esperados**
 - `204 No Content`
-- `404 Not Found`
+- `404 Not Found` si no existe
 
 ---
 
